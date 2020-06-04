@@ -80,6 +80,8 @@ def juste_prix():
             res_array.append(res)
             ret.append(msgs[3])
 
+        print(res_array)
+
         return render_template('juste_prix.html', msg=ret, res_array=res_array, name=item_name, brand=item_brand,
                                img=item_img, time=time_elapsed, random_nb=random_nb)
     else:
