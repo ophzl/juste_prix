@@ -88,11 +88,10 @@ def juste_prix():
         random_nb = random.randint(0, 9)
 
         if len(res_array) > 0:
-            res_array.pop()
-            ret.pop()
-            times.pop()
-            time_elapsed.pop()
-            items.pop()
+            res_array.clear()
+            ret.clear()
+            times.clear()
+            time_elapsed.clear()
 
         print(res_array)
 
