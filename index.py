@@ -99,3 +99,6 @@ def juste_prix():
         item_img = items[0][random_nb]['MainImageUrl']
 
         return render_template('juste_prix.html', random_nb=random_nb, name=item_name, brand=item_brand, img=item_img)
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0")
