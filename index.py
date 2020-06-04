@@ -42,7 +42,7 @@ times = []
 time_elapsed = []
 items = []
 
-@app.route('/le_juste_prix/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def juste_prix():
     msgs = ['C\'est plus petit', 'C\'est plus grand', 'Félicitations, vous avez le juste prix !',
             'Entrée incorrecte.']
