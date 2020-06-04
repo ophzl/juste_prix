@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"/>
+    <title>Le juste prix</title>
+</head>
+<body>
+<div class="header">
+    <h1>Le juste prix</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="item_container card text-center">
+                <div class="img_container">
+                    <img src="{{ img }}" alt="image_smartphone">
+                </div>
+                <span class="font-weight-bold">{{ name }}</span>
+                <span>{{ brand }}</span>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card card_style float-right">
+                <h2>Arriverez-vous à trouver le juste prix ?</h2>
+                <span>Vous souhaitez remporter ce magnifique <strong>{{ name }}</strong> ? C'est possible, mais avant, il faut trouver la valeur de ce dernier.</span>
+                <form method="POST" id="game_form">
+                    <input type="text" name="response" class="form-control" placeholder="Prix de l'article">
+                    <button type="submit" class="btn btn-success float-right">Valider</button>
+                    <button type="button" name="restart" class="btn btn-danger float-right mr-2"><a href="http://127.0.0.1:5000/le_juste_prix/">Recommencer</a></button>
+                    <input type="hidden" name="random_nb" value="{{ random_nb }}">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card my-3" id="game_logs">
+    <table class="table">
+        <thead>
+        <tr>
+            <!--            <th scope="col">#</th>-->
+            <th scope="col" class="text-center">Temps</th>
+            <th scope="col" class="text-center">Valeur entrée</th>
+            <th scope="col">Résultat</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for res in res_array %}
+        <tr>
+<!--            <td>{{ res }}</td>-->
+            <td class="text-center">{{ time[loop.index0] }}</td>
+            <td class="text-center">{{ res }}</td>
+            <td>{{ msg[loop.index0] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

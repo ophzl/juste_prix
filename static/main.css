@@ -1,0 +1,52 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+body {
+}
+
+.header {
+    margin-bottom: 4rem;
+    background-color: #30799B;
+    padding: 3rem;
+    border-radius: 0 0 15px 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #dddddd;
+}
+
+h2 {
+    text-align: center;
+}
+
+.card_style {
+    padding: 2rem;
+    width: 30rem;
+}
+
+#game_form {
+    margin-top: 2rem;
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+#game_logs {
+    width: 50rem;
+    margin: auto;
+}
+
+.item_container {
+    width: 20rem;
+    border: none;
+    padding-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
